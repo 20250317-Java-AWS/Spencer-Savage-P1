@@ -1,0 +1,28 @@
+<h1>XKCD Viewer App</h1>
+<div>
+  <p>Select a Comic 1 - {{ service.getMaxComic() }}</p>
+  <input (input)="comicInput($event)" type="number" min="1" max="{{ service.getMaxComic() }}" />
+  <button (click)="getComic()">Select</button>
+</div>
+<div>
+  <h2>{{ service.comicData().safe_title }}</h2>
+  <img src="{{ service.comicData().img }}" alt="{{service.comicData().alt}}"/>
+</div>
+<div>
+  <h3>Alt Text</h3>
+  <p>{{service.comicData().alt}}</p>
+</div>
+<div>
+  <button 
+    *ngIf="comicIsMin()"
+    (click)="service.getComic(service.comicData().num - 1)">
+    Previous
+  </button>
+
+  <button
+    *ngIf="comicIsMax()"
+    (click)="service.getComic(service.comicData().num + 1)"
+  >
+    Next
+  </button>
+</div>
