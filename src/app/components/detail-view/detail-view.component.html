@@ -1,26 +1,15 @@
-<h1>Comic Number {{service.comicData().num}} Details</h1>
-<div>
-    <ul>
-        <li>
-            Publish Date: {{service.comicData().month}} / {{service.comicData().day}} / {{service.comicData().year}}
-        </li>
-        <li>
-            Title: "{{service.comicData().title}}"
-        </li>
-        <li>
-            Safe_Title: "{{service.comicData().safe_title}}"
-        </li>
-        <li>
-            News: "{{service.comicData().news}}"
-        </li>
-        <li>
-            Alt Text: "{{service.comicData().alt}}"
-        </li>
-        <li>
-            Transcript: "{{service.comicData().transcript}}"
-        </li>
-        <li>
-            link:"{{service.comicData().link}}"
-        </li>
-    </ul>
+<div id="comic-details" class="container-fluid pt-5 mt-5">
+    <h1>Comic Number {{ service.comicData().num }} Details</h1>
+  <ul>
+    <li>
+      Publish Date: {{ service.comicData().month }} /
+      {{ service.comicData().day }} / {{ service.comicData().year }}
+    </li>
+    <li>Title: "{{ service.comicData().title }}"</li>
+    <li>Safe_Title: "{{ service.comicData().safe_title }}"</li>
+    <li>News: "{{ service.comicData().news }}"</li>
+    <li>Alt Text: "{{ service.comicData().alt }}"</li>
+    <li>Transcript: "{{ service.comicData().transcript }}"</li>
+    <li>link:"{{ service.comicData().link }}"</li>
+  </ul>
 </div>
