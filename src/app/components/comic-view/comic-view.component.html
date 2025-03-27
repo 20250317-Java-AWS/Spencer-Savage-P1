@@ -10,7 +10,7 @@
     <button (click)="getComic()">Select</button>
   </div>
   <div>
-    <h2>{{ service.comicData().safe_title }}</h2>
+    <h2>{{ service.comicData().safe_title }} - {{ service.comicData().num }}</h2>
     <img
       src="{{ service.comicData().img }}"
       alt="{{ service.comicData().alt }}"

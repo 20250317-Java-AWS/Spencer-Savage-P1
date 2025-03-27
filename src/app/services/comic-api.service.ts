@@ -1,5 +1,5 @@
 import { Injectable, signal, Signal, WritableSignal } from '@angular/core';
-import { Comic, emptyComic } from '../interfaces/comic';
+import { Comic, emptyComic } from '../interfaces/Comic';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
